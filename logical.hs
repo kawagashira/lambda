@@ -1,9 +1,7 @@
---true = \(x, y) -> x
---false = \(x, y) -> y
 true x y = x    -- $\lambda x y.x$
 false x y = y
---add = \(a, b) -> a b false
 add a b = a b false
+not' x = x false true
 
 -- Evaluation
 main = do

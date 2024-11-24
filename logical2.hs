@@ -2,6 +2,7 @@ t' x y = x    -- $\lambda x y.x$
 f' x y = y
 add a b = a b f'
 or' a b = b t' a
+not' x = x f' t'
 
 -- Evaluation
 main = do
