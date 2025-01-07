@@ -1,0 +1,23 @@
+-- K combinator
+k :: a -> b -> a
+k x _ = x
+
+-- S combinator
+s :: (a -> b -> c) -> (a -> b) -> a -> c
+s x y z = x z (y z)
+
+-- B combinaotr
+b = s (k s) k
+b' = c b
+
+-- C combinator
+c = s (b b s)(k k)
+
+main = do
+    let x = (*2)
+    let y = (+3)
+    let z = 4
+    let lhs = b' x y z
+    let rhs = y (x z)
+    putStrLn $ "B'XYZ = " ++ show lhs
+    putStrLn $ "Y(XZ) = " ++ show rhs
