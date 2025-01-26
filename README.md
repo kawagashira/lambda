@@ -11,3 +11,5 @@ SetOfSet.hs         hierarchical Set
 
 ackermann.hs        Ackermann's function
 fibonacci.hs        Fibonacci series
+
+neumann.hs          Neumannの順序数
