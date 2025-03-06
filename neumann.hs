@@ -1,5 +1,8 @@
 zero=[]
 one=[zero]
 two=[zero,one]
+
+--neumann :: Int -> [a]
 neumann 0 = []
-neumann n = n:(neumann (n-1))
+--succ (neumann n) = (neumann n):[neumann n]
+--succ' n = n ++ [n]
